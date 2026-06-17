@@ -1,0 +1,21 @@
+/// <reference types="vite/client" />
+
+interface BlogPostMeta {
+  slug: string
+  title: string
+  date: string
+  tags: string[]
+  description: string
+  cover?: string
+  readTime?: string
+}
+
+interface BlogPost extends BlogPostMeta {
+  html: string
+  content: string
+}
+
+declare module 'virtual:blog-posts' {
+  const posts: BlogPost[]
+  export default posts
+}
