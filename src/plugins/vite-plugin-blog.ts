@@ -13,12 +13,23 @@ const md: MarkdownIt = new MarkdownIt({
   linkify: true,
   typographer: true,
   highlight(str: string, lang: string): string {
+    let highlighted: string
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return `<pre class="hljs"><code>${hljs.highlight(str, { language: lang }).value}</code></pre>`
-      } catch (_) {}
+        highlighted = hljs.highlight(str, { language: lang }).value
+      } catch (_) {
+        highlighted = md.utils.escapeHtml(str)
+      }
+    } else {
+      highlighted = md.utils.escapeHtml(str)
     }
-    return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
+
+    // 添加行号
+    const lines = highlighted.split('\n')
+    const lineNumbers = lines.map((_, i) => `<span class="line-number">${i + 1}</span>`).join('')
+    const codeLines = lines.map((line) => `<span class="code-line">${line}</span>`).join('\n')
+
+    return `<pre class="hljs"><div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><div class="code-body"><div class="line-numbers">${lineNumbers}</div><code>${codeLines}</code></div></pre>`
   },
 })
 

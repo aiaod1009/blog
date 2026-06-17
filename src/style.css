@@ -118,9 +118,11 @@ body {
   line-height: 40px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   margin-bottom: 0.8em;
   color: #191c1e;
+  padding-left: 16px;
+  border-left: 4px solid rgb(25, 121, 112);
 }
 
 .blog-content h3 {
@@ -167,12 +169,16 @@ body {
 
 .blog-content blockquote {
   border-left: 3px solid rgb(25, 121, 112);
-  padding: 1em 1.2em;
-  margin: 1.5em 0;
+  padding: 0.8em 1.2em;
+  margin: 0.8em 0;
   color: #45464d;
   font-style: italic;
   background: rgba(25, 121, 112, 0.06);
   border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.blog-content blockquote p {
+  margin: 0;
 }
 
 .blog-content strong {
@@ -223,12 +229,72 @@ body {
   font-family: "JetBrains Mono", monospace;
   background: #1e1e1e;
   color: #d4d4d4;
-  font-size: 14px;
-  line-height: 1.6;
-  padding: 1.2em;
+  font-size: 15px;
+  line-height: 1;
   border-radius: 0.5rem;
   margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.blog-content .code-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: #2d2d2d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.blog-content .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.blog-content .dot.red {
+  background: #ff5f57;
+}
+
+.blog-content .dot.yellow {
+  background: #febc2e;
+}
+
+.blog-content .dot.green {
+  background: #28c840;
+}
+
+.blog-content .code-body {
+  display: flex;
   overflow-x: auto;
+}
+
+.blog-content .line-numbers {
+  padding: 1.2em 0;
+  padding-left: 16px;
+  padding-right: 12px;
+  text-align: right;
+  border-right: 1px solid #3d3d3d;
+  user-select: none;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.blog-content .line-number {
+  display: block;
+  line-height: 1.4;
+}
+
+.blog-content .code-body code {
+  display: block;
+  padding: 1.2em 16px;
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+}
+
+.blog-content .code-line {
+  display: block;
+  line-height: 1;
 }
 
 .blog-content code {
@@ -237,11 +303,12 @@ body {
 }
 
 .blog-content p code {
-  background: #eceef0;
+  background: rgba(25, 121, 112, 0.1);
   padding: 0.15em 0.4em;
   border-radius: 0.25rem;
-  color: #191c1e;
+  color: rgb(25, 121, 112);
   font-size: 0.85em;
+  font-weight: 500;
 }
 
 /* highlight.js 主题色 */
@@ -296,4 +363,14 @@ body {
 ::selection {
   background-color: #86f2e4;
   color: #00201d;
+}
+
+/* 隐藏滚动条 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

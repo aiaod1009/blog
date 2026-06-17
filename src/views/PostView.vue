@@ -72,7 +72,7 @@ function formatDate(date: string) {
       <!-- 左侧目录 -->
       <aside
         v-if="post.toc && post.toc.length > 0"
-        class="hidden lg:block w-64 shrink-0 sticky top-24 self-start"
+        class="hidden lg:block w-72 shrink-0 sticky top-24 self-start max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-hide"
       >
         <nav>
           <h4 class="font-mono text-sm font-semibold text-on-surface uppercase tracking-widest mb-6">目录</h4>
