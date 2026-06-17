@@ -23,7 +23,7 @@ const filteredPosts = computed(() => {
 <template>
   <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
     <!-- Hero 区域 -->
-    <HeroSection />
+    <HeroSection avatar="/photo.jpg" />
 
     <!-- 主体双栏 -->
     <div class="flex flex-col lg:flex-row gap-12">
