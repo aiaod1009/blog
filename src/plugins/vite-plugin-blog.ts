@@ -118,8 +118,9 @@ export default function blogPlugin() {
 
     // HMR：监听 content/blog 目录变化
     handleHotUpdate({ file, server }: { file: string; server: any }) {
-      const blogDir = getBlogDir()
-      if (file.startsWith(blogDir)) {
+      const blogDir = getBlogDir().replace(/\\/g, '/')
+      const normalizedFile = file.replace(/\\/g, '/')
+      if (normalizedFile.startsWith(blogDir)) {
         server.ws.send({ type: 'full-reload' })
         return []
       }

@@ -3,6 +3,7 @@ title: "SVG 雷达图 + AI 流式构图分析：从多边形到提示词工程"
 date: "2026-06-17"
 tags: ["SVG", "AI", "SSE", "Vue", "Frontend"]
 description: "用纯 SVG 画雷达图，用 SSE 流式传输 AI 分析结果，用一条提示词同时拿到结构化评分和文本分析。"
+cover: "/image.png"
 readTime: "12 min"
 ---
 

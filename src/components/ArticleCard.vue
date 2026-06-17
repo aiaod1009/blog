@@ -23,11 +23,11 @@ const formattedDate = props.date.replace(/-/g, '.')
 <template>
   <router-link
     :to="`/blog/${slug}`"
-    class="group article-card flex flex-col md:flex-row gap-6 transition-all duration-700"
+    class="group article-card flex flex-col md:flex-row gap-6 transition-all duration-700 pb-8 mb-8 border-b border-outline-variant"
   >
     <!-- 缩略图 -->
-    <div v-if="cover" class="shrink-0 md:w-40">
-      <div class="overflow-hidden rounded aspect-[4/3] md:aspect-square mb-4">
+    <div v-if="cover" class="shrink-0 md:w-56">
+      <div class="overflow-hidden aspect-square mb-4 md:mb-0">
         <img
           :alt="title"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
