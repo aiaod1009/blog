@@ -22,6 +22,27 @@ const md: MarkdownIt = new MarkdownIt({
   },
 })
 
+// 给标题标签注入 id 属性
+md.renderer.rules.heading_open = (tokens, idx) => {
+  const token = tokens[idx]
+  const level = token.tag
+  // 下一个 token 是 inline 内容
+  const inlineToken = tokens[idx + 1]
+  const text = inlineToken?.children?.reduce((acc: string, t: any) => acc + t.content, '') || ''
+  const id = text
+    .toLowerCase()
+    .replace(/[^\w一-鿿]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80)
+  return `<${level} id="${id}">`
+}
+
+export interface TocItem {
+  id: string
+  text: string
+  level: number
+}
+
 export interface BlogPostMeta {
   slug: string
   title: string
@@ -35,6 +56,18 @@ export interface BlogPostMeta {
 export interface BlogPost extends BlogPostMeta {
   html: string
   content: string
+  toc: TocItem[]
+}
+
+function extractToc(html: string): TocItem[] {
+  const regex = /<h([23])\s+id="([^"]*)">(.*?)<\/h[23]>/g
+  const toc: TocItem[] = []
+  let match
+  while ((match = regex.exec(html)) !== null) {
+    const text = match[3].replace(/<[^>]+>/g, '')
+    toc.push({ level: parseInt(match[1]), id: match[2], text })
+  }
+  return toc
 }
 
 function getBlogDir() {
@@ -52,6 +85,7 @@ function parseAllPosts(): BlogPost[] {
     const raw = fs.readFileSync(path.join(blogDir, file), 'utf-8')
     const { data, content } = matter(raw)
     const html = md.render(content)
+    const toc = extractToc(html)
     return {
       slug,
       title: data.title || slug,
@@ -62,6 +96,7 @@ function parseAllPosts(): BlogPost[] {
       readTime: data.readTime || '',
       html,
       content,
+      toc,
     }
   })
 
@@ -78,6 +113,8 @@ function parsePost(slug: string): BlogPost | null {
   const { data, content } = matter(raw)
   const html = md.render(content)
 
+  const toc = extractToc(html)
+
   return {
     slug,
     title: data.title || slug,
@@ -88,6 +125,7 @@ function parsePost(slug: string): BlogPost | null {
     readTime: data.readTime || '',
     html,
     content,
+    toc,
   }
 }
 

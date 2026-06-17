@@ -58,10 +58,10 @@
   --radius-full: 0.75rem;
 
   /* 间距 */
-  --spacing-content-max: 720px;
+  --spacing-content-max: 800px;
   --spacing-gutter: 24px;
   --spacing-margin-desktop: 40px;
-  --spacing-container-max: 1200px;
+  --spacing-container-max: 1300px;
   --spacing-base: 8px;
   --spacing-margin-mobile: 20px;
 
@@ -166,16 +166,56 @@ body {
 }
 
 .blog-content blockquote {
-  border-left: 3px solid #006a61;
-  padding-left: 1em;
+  border-left: 3px solid rgb(25, 121, 112);
+  padding: 1em 1.2em;
   margin: 1.5em 0;
   color: #45464d;
   font-style: italic;
+  background: rgba(25, 121, 112, 0.06);
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .blog-content strong {
   font-weight: 600;
   color: #191c1e;
+}
+
+/* 表格 */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 16px;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid #c6c6cd;
+  padding: 0.6em 1em;
+  text-align: left;
+}
+
+.blog-content th {
+  background: #eceef0;
+  font-weight: 600;
+}
+
+.blog-content tr:nth-child(even) {
+  background: #f7f9fb;
+}
+
+/* 图片 */
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+}
+
+/* 分割线 */
+.blog-content hr {
+  border: none;
+  border-top: 1px solid #c6c6cd;
+  margin: 2em 0;
 }
 
 /* 代码块 */

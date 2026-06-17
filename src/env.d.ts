@@ -1,5 +1,11 @@
 /// <reference types="vite/client" />
 
+interface TocItem {
+  id: string
+  text: string
+  level: number
+}
+
 interface BlogPostMeta {
   slug: string
   title: string
@@ -13,6 +19,7 @@ interface BlogPostMeta {
 interface BlogPost extends BlogPostMeta {
   html: string
   content: string
+  toc: TocItem[]
 }
 
 declare module 'virtual:blog-posts' {
