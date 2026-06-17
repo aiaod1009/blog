@@ -112,6 +112,11 @@ body {
   color: #191c1e;
 }
 
+/* 隐藏正文中的 h1，因为页面已有标题 */
+.blog-content h1 {
+  display: none;
+}
+
 .blog-content h2 {
   font-family: "Source Serif 4", serif;
   font-size: 32px;
@@ -361,8 +366,8 @@ body {
 
 /* 选中文字颜色 */
 ::selection {
-  background-color: #86f2e4;
-  color: #00201d;
+  background-color: rgba(25, 121, 112, 0.2);
+  color: #191c1e;
 }
 
 /* 隐藏滚动条 */

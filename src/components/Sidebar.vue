@@ -9,18 +9,32 @@ const techTags = [
 // 开源项目
 const projects = [
   {
-    name: 'jvance/minimalist-engine',
-    description: 'A lightweight static site generator optimized for typography.',
-    lang: 'TypeScript',
-    langColor: '#3178c6',
-    stars: '1.2k',
+    name: 'chiaroscuro',
+    description: '全栈摄影作品集平台，支持AI智能构图分析、足迹地图、暗房管理',
+    lang: 'Vue 3 + Node.js',
+    langColor: '#41b883',
+    link: 'https://github.com/aiaod1009/chiaroscuro',
   },
   {
-    name: 'jvance/rust-grpc-kit',
-    description: 'Experimental gRPC framework built with safety in mind.',
-    lang: 'Rust',
-    langColor: '#dea584',
-    stars: '450',
+    name: 'algo-mind',
+    description: '一站式算法学习平台，提供可视化算法演示、在线编程环境与个性化学习路径',
+    lang: 'Vue 3 + java',
+    langColor: '#f7df1e',
+    link: 'https://github.com/aiaod1009/algo-mind',
+  },
+  {
+    name: 'python-lanqiao',
+    description: '蓝桥杯国赛二等奖题库，涵盖算法、数据结构、数学建模等，配有详细解析与代码实现',
+    lang: 'Python',
+    langColor: '#3776ab',
+    link: 'https://github.com/aiaod1009/python-lanqiao',
+  },
+  {
+    name: 'blgo',
+    description: '个人博客系统，支持Markdown写作、主题定制与性能优化，专注于极简设计与优雅交互',
+    lang: 'Vue 3 + TypeScript',
+    langColor: '#41b883',
+    link: 'https://github.com/aiaod1009/blgo',
   },
 ]
 
@@ -40,12 +54,9 @@ const books = [
         热门技术
       </h4>
       <div class="flex flex-wrap gap-2">
-        <a
-          v-for="tag in techTags"
-          :key="tag"
+        <a v-for="tag in techTags" :key="tag"
           class="font-mono text-xs px-3 py-1.5 bg-white border border-outline-variant rounded hover:border-secondary transition-colors"
-          href="#"
-        >
+          href="#">
           #{{ tag }}
         </a>
       </div>
@@ -58,8 +69,9 @@ const books = [
         我的开源项目
       </h4>
       <div class="space-y-4">
-        <div v-for="(project, idx) in projects" :key="project.name" :class="idx > 0 ? 'pt-4 border-t border-outline-variant/30' : ''" class="group">
-          <a class="block" href="#">
+        <div v-for="(project, idx) in projects" :key="project.name"
+          :class="idx > 0 ? 'pt-4 border-t border-outline-variant/30' : ''" class="group">
+          <a class="block" :href="project.link" target="_blank">
             <span class="font-mono text-sm font-bold block group-hover:text-secondary transition-colors">
               {{ project.name }}
             </span>
@@ -69,12 +81,12 @@ const books = [
                 <span class="w-2 h-2 rounded-full" :style="{ backgroundColor: project.langColor }"></span>
                 {{ project.lang }}
               </span>
-              <span class="flex items-center gap-1">⭐ {{ project.stars }}</span>
             </div>
           </a>
         </div>
       </div>
-      <a class="mt-6 block text-center font-mono text-[10px] text-secondary uppercase tracking-widest hover:underline" href="#">
+      <a class="mt-6 block text-center font-mono text-[10px] text-secondary uppercase tracking-widest hover:underline"
+        href="#">
         View Github Profile
       </a>
     </div>
