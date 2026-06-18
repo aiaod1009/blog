@@ -1,6 +1,6 @@
 ---
 title: "拍立得照片墙 — 用 CSS 3D 变换还原桌面散落照片"
-date: "2026-06-16"
+date: "2026-06-13"
 tags: ["CSS", "3D", "Vue", "Frontend", "Animation"]
 description: "模拟拍立得照片散落在桌面上的展示组件，涵盖图片尺寸预加载、CSS 3D 翻转卡片、随机散落布局算法等技术细节。"
 cover: "/pailide.png"

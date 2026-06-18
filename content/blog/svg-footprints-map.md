@@ -1,6 +1,6 @@
 ---
 title: '基于 Vue 3 + D3.js 的纯 SVG 空间地理"足迹地图"全栈跨端直传与自动点亮技术攻坚'
-date: "2026-05-25"
+date: "2026-06-15"
 tags: ["Vue 3", "D3.js", "SVG", "TopoJSON", "数据可视化"]
 description: "纯 SVG 节点渲染 + D3.js 物理投影数学流，不下载任何瓦片，完全通过地理空间边界文件进行就地矢量绘制。"
 cover: "/ditu.png"

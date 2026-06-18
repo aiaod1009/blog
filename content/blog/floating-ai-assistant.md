@@ -1,8 +1,9 @@
 ---
 title: "悬浮窗 AI 助手：WebSocket 实时通信与可拖拽浮窗的完整实现"
-date: "2026-05-15"
+date: "2026-06-05"
 tags: ["WebSocket", "Vue", "AI", "拖拽", "前端", "Frontend"]
 description: "一个类似 Intercom / Drift 的悬浮式 AI 聊天助手，支持 WebSocket 实时对话、流式输出、文件上传、可拖拽可缩放。"
+cover: "/ai.png"
 readTime: "10 min"
 ---
 
