@@ -1,6 +1,6 @@
 ---
 title: "邮筒吐明信片 — 一个交互动画的完整实现"
-date: "2026-06-14"
+date: "2026-06-15"
 tags: ["CSS", "Vue", "Animation", "前端"]
 description: "一个纯 CSS 构建的邮筒交互动画组件的完整实现过程，涵盖层叠上下文设计、Grid 布局策略、CSS 动画状态机、html2canvas 截图导出等技术点。"
 cover: "/mingxinpian.png"
