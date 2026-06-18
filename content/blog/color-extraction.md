@@ -3,6 +3,7 @@ title: "图片主色调提取：从像素到翠绿、宝蓝"
 date: "2026-06-16"
 tags: ["Canvas", "JavaScript", "前端", "算法"]
 description: "不依赖任何第三方库，用 Canvas + 量化算法，纯前端实现图片色彩提取与中文命名。"
+cover: "/se.png"
 readTime: "10 min"
 ---
 
