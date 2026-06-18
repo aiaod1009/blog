@@ -3,6 +3,7 @@ title: "做题热力图：从数据库到前端的完整实现"
 date: "2026-05-14"
 tags: ["Vue", "SQL", "可视化", "前端", "Frontend"]
 description: "类似 GitHub Contributions Graph 的做题活跃度可视化，记录用户每天的刷题情况，用颜色深浅展示活跃程度。"
+cover: "/hot.png"
 readTime: "8 min"
 ---
 
