@@ -30,7 +30,7 @@ withDefaults(defineProps<Props>(), {
       </div>
 
       <!-- 介绍 -->
-      <div class="flex-1 text-center md:text-left">
+      <div class="flex-1 text-center md:text-left -mt-2">
         <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
           <h4 class="font-mono text-secondary text-lg">&gt; Hello World, I'm {{ name }}</h4>
         </div>

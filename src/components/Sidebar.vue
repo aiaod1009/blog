@@ -40,7 +40,7 @@ const projects = [
 </script>
 
 <template>
-  <aside class="lg:w-1/3 space-y-12">
+  <aside class="lg:w-1/3 space-y-12 lg:mt-16">
     <!-- 热门技术 -->
     <div>
       <h4 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
