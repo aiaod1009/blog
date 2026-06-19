@@ -37,12 +37,6 @@ const projects = [
     link: 'https://github.com/aiaod1009/blgo',
   },
 ]
-
-// 近期在读
-const books = [
-  { title: 'Designing Data-Intensive Applications', author: 'Martin Kleppmann' },
-  { title: 'The Pragmatic Programmer', author: 'Andrew Hunt' },
-]
 </script>
 
 <template>
@@ -89,23 +83,6 @@ const books = [
         href="#">
         View Github Profile
       </a>
-    </div>
-
-    <!-- 近期在读 -->
-    <div>
-      <h4 class="font-headline-md text-[20px] mb-6 flex items-center gap-2">
-        <span class="material-symbols-outlined text-secondary">menu_book</span>
-        近期在读
-      </h4>
-      <div class="space-y-6">
-        <div v-for="book in books" :key="book.title" class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-on-surface-variant text-lg mt-1">auto_stories</span>
-          <div>
-            <p class="font-bold text-sm text-on-surface">{{ book.title }}</p>
-            <p class="text-xs text-on-surface-variant mt-0.5">{{ book.author }}</p>
-          </div>
-        </div>
-      </div>
     </div>
   </aside>
 </template>
