@@ -10,7 +10,7 @@ interface Props {
 withDefaults(defineProps<Props>(), {
   avatar: '',
   name: 'Cai Xining',
-  bio: '全栈工程师、开源贡献者与架构探索者。我致力于构建高性能的分布式系统与极致的前端渲染体验，在人机交互的工程化实践中寻找技术与艺术的平衡点。目前专注于云原生架构演进及新一代 Web 技术的探索。',
+  bio: '全栈开发者与开源贡献者。热爱用代码解决实际问题，致力于构建高性能 Web 应用与极致的前端渲染体验，在工程实践中追求技术与设计的平衡。目前专注于全栈架构演进、数据可视化与 AI 应用探索。',
   skills: () => ['python', 'C/C++', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'ArkTs', 'TypeScript', 'VUE3', 'Node.js', 'Express', 'MongoDB'],
   github: 'github.com/aiaod1009',
 })
