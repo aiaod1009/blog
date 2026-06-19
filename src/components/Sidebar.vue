@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// 热门技术标签
+// 热门标签
 const techTags = [
-  'JavaScript', 'Node.js', 'Docker', 'GraphQL',
-  'Next.js', 'Architecture', 'DevOps', 'Python',
-  'Vue', 'TypeScript', 'Rust', 'Go',
+  'Vue', 'AI', 'Node.js', '全栈',
+  '前端', '性能优化', 'MongoDB', '腾讯云 COS',
+  'SSE', 'CSS', 'Animation', 'JavaScript',
 ]
 
 // 开源项目
@@ -41,11 +41,11 @@ const projects = [
 
 <template>
   <aside class="lg:w-1/3 space-y-12">
-    <!-- 热门技术 -->
+    <!-- 热门标签 -->
     <div>
       <h4 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
         <span class="material-symbols-outlined text-secondary">label</span>
-        热门技术
+        热门标签
       </h4>
       <div class="flex flex-wrap gap-2">
         <a v-for="tag in techTags" :key="tag"
