@@ -8,11 +8,6 @@ readTime: "12 min"
 
 # 📔 全栈开发日记：从架构坍塌到准商业级演进——全栈全流程解耦与图片直传中台攻坚
 
-- **Date:** 2026-05-22
-- **Project:** 《光影纪 (Chiaroscuro)》独立影像站
-- **Author:** 精准控光的影像主理人
-- **Tags:** `Vue 3` | `Node.js` | `MongoDB` | `腾讯云 COS` | `STS 安全鉴权` | `边缘计算`
-
 ## 🛑 一、 序章：为什么我必须推翻原有的"后端中转"架构？
 
 在项目的最初版本中，图片上传逻辑采用的是最传统的"串行中转模式"：前端选择原图 $\rightarrow$ 塞给 Node.js 后端 $\rightarrow$ 后端在内存中解开二进制流并用 `exif-parser` 提取参数 $\rightarrow$ 后端调用腾讯云 SDK 上传 COS $\rightarrow$ 录入 MongoDB。
