@@ -1,1 +1,1 @@
-ts
+ts+tailwindCss
