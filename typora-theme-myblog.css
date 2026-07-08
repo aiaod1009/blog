@@ -1,0 +1,368 @@
+/*
+ * Typora 主题 - 基于我的博客风格
+ * 
+ * 安装方法：
+ * 1. 打开 Typora → 文件 → 偏好设置 → 外观 → 打开主题文件夹
+ * 2. 将此文件复制到主题文件夹中
+ * 3. 重启 Typora，在 主题 菜单中选择 "Myblog"
+ */
+
+/* ===== 基础变量 ===== */
+:root {
+  --bg-color: #F8FAFC;
+  --text-color: #191c1e;
+  --text-secondary: #45464d;
+  --border-color: #c6c6cd;
+  --accent-color: #197970;
+  --accent-hover: #005049;
+  --link-color: #006a61;
+  --surface-container: #eceef0;
+  --surface-bright: #f7f9fb;
+  --surface-dim: #e0e3e5;
+  --code-bg: #1e1e1e;
+  --code-header-bg: #2d2d2d;
+  --code-border: #3d3d3d;
+  --inline-code-bg: rgba(25, 121, 112, 0.1);
+  --inline-code-color: rgb(25, 121, 112);
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Source Serif 4", "Noto Serif CJK SC", "SimSun", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  --font-size: 18px;
+  --line-height: 1.8;
+  --selection-bg: rgba(25, 121, 112, 0.2);
+}
+
+/* ===== 全局 ===== */
+html,
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 选中文字 ===== */
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--text-color);
+}
+
+/* ===== 标题 ===== */
+h1 {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: var(--text-color);
+  padding-left: 16px;
+  border-left: 4px solid var(--accent-color);
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  color: var(--text-color);
+}
+
+h4 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+/* ===== 段落 ===== */
+p {
+  margin-bottom: 1.2em;
+}
+
+/* ===== 链接 ===== */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ===== 列表 ===== */
+ul,
+ol {
+  margin-bottom: 1.2em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+/* ===== 引用块 ===== */
+blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding: 0.8em 1.2em;
+  margin: 0.8em 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  background: rgba(25, 121, 112, 0.06);
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* ===== 粗体 ===== */
+strong {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* ===== 表格 ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 16px;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1em;
+  text-align: left;
+}
+
+th {
+  background: var(--surface-container);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: var(--surface-bright);
+}
+
+/* ===== 图片 ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+}
+
+/* ===== 分割线 ===== */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2em 0;
+}
+
+/* ===== 行内代码 ===== */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--inline-code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  color: var(--inline-code-color);
+  font-weight: 500;
+}
+
+/* ===== 代码块 (Typora 使用 .md-fences) ===== */
+.md-fences {
+  font-family: var(--font-mono);
+  background-color: var(--code-bg);
+  color: #d4d4d4;
+  font-size: 15px;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  margin: 1.5em 0;
+  padding: 1.2em 16px;
+  border: none;
+}
+
+/* 代码块内选中文字 */
+.md-fences ::selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d4d4d4;
+}
+
+/* 源码模式代码块 */
+#write .md-fences {
+  background-color: var(--code-bg);
+}
+
+/* ===== 语法高亮（VS Code Dark 风格） ===== */
+/* 关键字 */
+.cm-keyword,
+.md-fences .cm-keyword {
+  color: #569cd6;
+}
+
+/* 字符串 */
+.cm-string,
+.md-fences .cm-string {
+  color: #ce9178;
+}
+
+/* 数字 */
+.cm-number,
+.md-fences .cm-number {
+  color: #b5cea8;
+}
+
+/* 注释 */
+.cm-comment,
+.md-fences .cm-comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* 函数名 */
+.cm-def,
+.cm-variable-2,
+.md-fences .cm-def,
+.md-fences .cm-variable-2 {
+  color: #dcdcaa;
+}
+
+/* 类型 */
+.cm-type,
+.cm-builtin,
+.md-fences .cm-type,
+.md-fences .cm-builtin {
+  color: #4ec9b0;
+}
+
+/* 变量 */
+.cm-variable,
+.md-fences .cm-variable {
+  color: #9cdcfe;
+}
+
+/* 元数据/属性 */
+.cm-meta,
+.cm-attribute,
+.md-fences .cm-meta,
+.md-fences .cm-attribute {
+  color: #9cdcfe;
+}
+
+/* 标签 */
+.cm-tag,
+.md-fences .cm-tag {
+  color: #569cd6;
+}
+
+/* 操作符 */
+.cm-operator,
+.md-fences .cm-operator {
+  color: #d4d4d4;
+}
+
+/* 属性值 */
+.cm-property,
+.md-fences .cm-property {
+  color: #9cdcfe;
+}
+
+/* ===== 任务列表 ===== */
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+/* ===== 元数据块（frontmatter） ===== */
+pre.md-meta-block {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  background: var(--surface-container);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 1em;
+  color: var(--text-secondary);
+}
+
+/* ===== 数学公式 ===== */
+.md-math-block,
+.md-rawblock {
+  font-family: var(--font-mono);
+}
+
+/* ===== 脚注 ===== */
+.footnote-area {
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+/* ===== 写作区域 ===== */
+#write {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== 侧边栏 / 大纲 ===== */
+.sidebar-content {
+  font-family: var(--font-sans);
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
